@@ -35,11 +35,14 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const isHome = pathname === "/";
+  const solid = scrolled || !isHome;
+
   return (
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        scrolled
+        solid
           ? "bg-brand-navy/95 backdrop-blur-md shadow-lg"
           : "bg-transparent",
       )}>
@@ -57,7 +60,7 @@ export default function Navbar() {
             priority
             className='h-10 w-auto object-contain'
           />
-          <span className='font-display text-lg font-bold'>
+          <span className='font-display text-lg font-bold text-white'>
             SHARP<span className='text-brand-orange'>BRAIN</span>
           </span>
         </Link>
@@ -72,9 +75,7 @@ export default function Navbar() {
                   "text-sm font-medium transition-colors duration-200",
                   pathname === href
                     ? "text-brand-orange"
-                    : scrolled
-                      ? "text-white/80 hover:text-white"
-                      : "text-foreground/70 hover:text-foreground",
+                    : "text-white/80 hover:text-white",
                 )}>
                 {label}
               </Link>
@@ -86,7 +87,7 @@ export default function Navbar() {
         <div className='flex items-center gap-2'>
           <ThemeToggle
             iconClassName={
-              scrolled
+              solid
                 ? "text-white hover:text-white hover:bg-white/10"
                 : undefined
             }
@@ -101,10 +102,7 @@ export default function Navbar() {
             WhatsApp
           </a>
           <button
-            className={cn(
-              "md:hidden p-1 transition-colors duration-300",
-              scrolled ? "text-white" : "text-foreground",
-            )}
+            className="md:hidden p-1 transition-colors duration-300 text-white"
             aria-label={open ? "Close menu" : "Open menu"}
             onClick={() => setOpen(!open)}>
             {open ? <X className='size-6' /> : <Menu className='size-6' />}

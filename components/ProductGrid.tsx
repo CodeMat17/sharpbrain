@@ -23,7 +23,7 @@ export default function ProductGrid({ products, showFilter = true }: ProductGrid
         <CategoryFilter active={active} onChange={setActive} />
       )}
 
-      <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
         <AnimatePresence mode="popLayout">
           {filtered.map((product) => (
             <motion.div

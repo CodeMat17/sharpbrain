@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 const categories = ["All", "Home Furniture", "Office Solutions"];
@@ -17,12 +18,19 @@ export default function CategoryFilter({ active, onChange }: CategoryFilterProps
           key={cat}
           onClick={() => onChange(cat)}
           className={cn(
-            "px-2.5 sm:px-4 py-1.5 rounded-full text-sm font-medium transition-colors duration-200 border",
+            "relative px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200 border",
             active === cat
-              ? "bg-[#E87722] text-white border-[#E87722]"
-              : "bg-transparent text-[#6B7280] dark:text-[#9CA3AF] border-border hover:border-[#E87722] hover:text-[#E87722]"
+              ? "text-white border-brand-orange"
+              : "bg-transparent text-brand-muted dark:text-[#9CA3AF] border-border hover:border-brand-orange hover:text-brand-orange"
           )}
         >
+          {active === cat && (
+            <motion.span
+              layoutId="category-pill"
+              className="absolute inset-0 bg-brand-orange rounded-full -z-10"
+              transition={{ type: "spring", stiffness: 400, damping: 30 }}
+            />
+          )}
           {cat}
         </button>
       ))}

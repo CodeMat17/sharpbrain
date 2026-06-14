@@ -5,6 +5,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import ScrollProgress from "@/components/ScrollProgress";
 
 const nunito = Nunito({
   variable: "--font-nunito",
@@ -143,6 +144,7 @@ export default function RootLayout({
           defaultTheme="light"
           enableSystem
           disableTransitionOnChange={false}>
+          <ScrollProgress />
           <Navbar />
           <main className="flex-1">{children}</main>
           <Footer />

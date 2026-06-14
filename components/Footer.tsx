@@ -8,11 +8,33 @@ const WA_LINK = "https://wa.me/2349069372377";
 export default function Footer() {
   return (
     <footer className="bg-brand-navy text-white">
+      {/* Pre-footer CTA strip */}
+      <div className="border-t border-white/10 bg-linear-to-r from-brand-navy via-[#1a2d4a] to-brand-navy">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div>
+            <p className="font-display text-lg font-bold text-white">
+              Ready to order? We deliver across{" "}
+              <span className="text-brand-orange">Abuja</span>.
+            </p>
+            <p className="text-white/50 text-sm mt-0.5">Payment on delivery · Free installation · 13+ years of trust</p>
+          </div>
+          <a
+            href={WA_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="shrink-0 inline-flex items-center gap-2 bg-brand-orange hover:bg-[#d06a1a] text-white font-semibold px-5 py-2.5 rounded-xl transition-all duration-200 shadow-lg shadow-brand-orange/20 hover:shadow-brand-orange/40 hover:scale-[1.02]"
+          >
+            <WhatsAppIcon className="size-4" />
+            Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 mb-3">
               <Image
                 src="/logo.webp"
                 alt="Sharpbrain Business Ventures"
@@ -24,17 +46,17 @@ export default function Footer() {
                 SHARP<span className="text-brand-orange">BRAIN</span>
               </span>
             </div>
-            <p className="mt-3 text-white/60 text-sm leading-relaxed">
+            <p className="text-white/50 text-sm leading-relaxed">
               Premium Furniture &amp; Electronics — Delivered to Your Door. Serving
-              Abuja with quality and trust.
+              Abuja with quality and trust since 2011.
             </p>
-            <div className="mt-4 flex gap-3">
+            <div className="mt-5 flex gap-3">
               <a
                 href={WA_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
-                className="bg-white/10 hover:bg-brand-orange p-2 rounded-full transition-colors"
+                className="bg-white/8 hover:bg-brand-orange p-2.5 rounded-full transition-all duration-200 hover:scale-110"
               >
                 <WhatsAppIcon className="size-4" />
               </a>
@@ -43,14 +65,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="bg-white/10 hover:bg-brand-orange p-2 rounded-full transition-colors"
-              >
-                <InstagramIcon className="size-4" />
-              </a>
-              <a
-                href="#"
-                aria-label="Facebook"
-                className="bg-white/10 hover:bg-brand-orange p-2 rounded-full transition-colors"
+                className="bg-white/8 hover:bg-brand-orange p-2.5 rounded-full transition-all duration-200 hover:scale-110"
               >
                 <InstagramIcon className="size-4" />
               </a>
@@ -62,7 +77,7 @@ export default function Footer() {
             <h3 className="font-semibold text-sm uppercase tracking-wider text-brand-orange mb-4">
               Quick Links
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2.5">
               {[
                 { href: "/", label: "Home" },
                 { href: "/products", label: "Products" },
@@ -72,9 +87,9 @@ export default function Footer() {
                 <li key={href}>
                   <Link
                     href={href}
-                    className="text-white/60 hover:text-white text-sm transition-colors"
+                    className="text-white/50 hover:text-white text-sm transition-colors duration-200 hover:translate-x-1 inline-block"
                   >
-                    {label}
+                    → {label}
                   </Link>
                 </li>
               ))}
@@ -84,10 +99,10 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <h3 className="font-semibold text-sm uppercase tracking-wider text-brand-orange mb-4">
-              Contact
+              Contact Us
             </h3>
-            <ul className="space-y-2 text-sm text-white/60">
-              <li>Conakry Street, Wuse Zone 3, Abuja</li>
+            <ul className="space-y-2.5 text-sm text-white/50">
+              <li className="leading-relaxed">Conakry Street, Wuse Zone 3, Abuja</li>
               <li>
                 <a href="tel:+2349069372377" className="hover:text-white transition-colors">
                   +234 906 937 2377
@@ -110,8 +125,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 pt-6 border-t border-white/10 text-center text-white/40 text-xs">
-          © 2026 Sharpbrain Business Ventures Nig. Ltd. All rights reserved.
+        <div className="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-2 text-white/30 text-xs">
+          <span>© 2026 Sharpbrain Business Ventures Nig. Ltd. All rights reserved.</span>
+          <span>Wuse Zone 3, Abuja, Nigeria</span>
         </div>
       </div>
     </footer>
