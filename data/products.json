@@ -1,0 +1,69 @@
+[
+  {
+    "id": "001",
+    "name": "Executive High-Back Office Chair",
+    "category": "Office Solutions",
+    "price": 35000,
+    "priceOnRequest": false,
+    "badge": null,
+    "image": "/images/products/executive_chair_2.jpg",
+    "description": "Ergonomic high-back leather chair. Ideal for offices and executive suites.",
+    "featured": true
+  },
+  {
+    "id": "002",
+    "name": "14-Seater Conference Table",
+    "category": "Office Solutions",
+    "price": null,
+    "priceOnRequest": true,
+    "badge": null,
+    "image": "/images/products/conference_table_2.jpg",
+    "description": "Premium boardroom table with cable management. Available in various finishes.",
+    "featured": true
+  },
+  {
+    "id": "003",
+    "name": "Executive Table",
+    "category": "Office Solutions",
+    "price": 350000,
+    "priceOnRequest": false,
+    "badge": "Best Seller",
+    "image": "/images/products/office_table_2.jpg",
+    "description": "Executive table only.",
+    "featured": true
+  },
+  {
+    "id": "004",
+    "name": "6-Seater Dining Table Set",
+    "category": "Home Furniture",
+    "price": 670000,
+    "priceOnRequest": false,
+    "badge": null,
+    "image": "/images/products/dining_table.jpg",
+    "description": "Solid wood dining set with 6 upholstered chairs. Delivery and setup included.",
+    "featured": true
+  },
+  {
+    "id": "005",
+    "name": "2 in 1 Center Table",
+    "category": "Home Furniture",
+    "price": 450000,
+    "priceOnRequest": false,
+    "badge": "New Arrival",
+    "image": "/images/products/center_table.jpg",
+    "description": "Premium fabric 3+2 sofa set. Available in multiple colors.",
+    "featured": true
+  },
+  {
+    "id": "006",
+    "name": "6-Door Office Shelf",
+    "category": "Office Solutions",
+    "price": 350000,
+    "priceOnRequest": false,
+    "badge": null,
+    "image": "/images/products/shelf.jpg",
+    "description": "Heavy-duty steel filing cabinet with lock. Perfect for document storage.",
+    "featured": false
+  }
+ 
+]
