@@ -20,7 +20,7 @@ export default function HeroSection() {
   const prefersReduced = useReducedMotion();
 
   return (
-    <section className="relative min-h-screen pt-20 pb-8 md:min-h-[95vh] flex items-center overflow-hidden bg-[#0F1E35]">
+    <section className="relative min-h-screen md:pt-20 pb-8 md:min-h-[95vh] flex items-center overflow-hidden bg-[#0F1E35]">
       {/* Animated floating orbs */}
       <motion.div
         animate={prefersReduced ? {} : { y: [0, -20, 0], x: [0, 10, 0] }}
