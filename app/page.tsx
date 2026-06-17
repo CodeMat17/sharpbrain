@@ -124,12 +124,15 @@ function CTABanner() {
 export default function HomePage() {
   return (
     <>
-      <HeroSection />
-      <ValuePropsBar />
-      <FeaturedProducts />
-      <AboutTeaser />
-      <Testimonials />
-      <CTABanner />
+    <div className="flex items-center justify-center min-h-screen font-bold text-5xl">
+      Shot down
+    </div>
+      {/* <HeroSection /> */}
+      {/* <ValuePropsBar /> */}
+      {/* <FeaturedProducts /> */}
+      {/* <AboutTeaser /> */}
+      {/* <Testimonials /> */}
+      {/* <CTABanner /> */}
     </>
   );
 }

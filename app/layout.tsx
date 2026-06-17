@@ -144,11 +144,11 @@ export default function RootLayout({
           defaultTheme="light"
           enableSystem
           disableTransitionOnChange={false}>
-          <ScrollProgress />
-          <Navbar />
+          {/* <ScrollProgress /> */}
+          {/* <Navbar /> */}
           <main className="flex-1">{children}</main>
-          <Footer />
-          <FloatingWhatsApp />
+          {/* <Footer /> */}
+          {/* <FloatingWhatsApp /> */}
         </ThemeProvider>
       </body>
     </html>

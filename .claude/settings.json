@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/USER/Documents/projects/**)",
+      "PowerShell(& npx tsc --noEmit --project \"C:\\\\Users\\\\USER\\\\Documents\\\\projects\\\\redoak-furniture\\\\tsconfig.json\" 2>&1)",
+      "PowerShell(npm run build --prefix \"C:\\\\Users\\\\USER\\\\Documents\\\\projects\\\\redoak-furniture\" 2>&1)",
+      "PowerShell(npm install class-variance-authority @radix-ui/react-dialog @radix-ui/react-slot --prefix \"C:\\\\Users\\\\USER\\\\Documents\\\\projects\\\\redoak-furniture\" 2>&1)"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\USER\\Documents\\projects\\redoak-furniture\\data",
+      "C:\\Users\\USER\\Documents\\projects\\redoak-furniture\\components",
+      "C:\\Users\\USER\\Documents\\projects\\redoak-furniture\\app"
+    ]
+  }
+}
